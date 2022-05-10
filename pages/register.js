@@ -18,11 +18,21 @@ export default function RegisterPage() {
   })
 
   const handleSubmit = (e) => {
-
+    /*
+      TODO: This would be where the userForm is placed in the database.
+      There is a similar demo program made by Next.js that uses mongoDB that
+      I think provides some good guidance on where to start to complete this implementation.
+      I just ran out of time. But I would follow this example for learning purposes
+      before optimizing: https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose
+    */
   }
 
-    const handleChange = (e) => {
-    
+  const handleChange = (e) => {
+    /*
+      TODO: check for valid values here and set states for each form array.
+      Obviously the validation could get pretty complicated without definitions
+      for expected ranges and contents. (for instance, valid phone numbers)
+    */
   }
 
   return (
@@ -30,9 +40,18 @@ export default function RegisterPage() {
       <Head>
         <title>Done Demo Patient Register</title>
       </Head>
+      {/* TODO format*/}
       <p className={styles.description}>
         Patient Register
       </p>
+
+      {/* 
+        TODO formatting, but also some thought needs to be put into
+        maxLength for each value and whether types are correct. Further,
+        I want to do exploration on how I can connect this with filepicker
+        and datepicker functionality. I still need to look into how filepicking
+        and datepicking components look and operate. For now, there are text placeholders.
+      */}
       <userForm onSubmit={handleSubmit}>
         <label htmlFor="nameLbl">Name</label>
         <input
@@ -106,6 +125,7 @@ export default function RegisterPage() {
           onChange={handleChange}
           />
         <p/>
+        {/* TODO format*/}
           <Link href="/">
             <button type="submit" className="submitBtn">Submit</button>
           </Link>

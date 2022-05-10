@@ -1,7 +1,6 @@
 //import '../styles/globals.css'
 import Head from 'next/head'
 import Link from 'next/link'
-//import styles from '../styles/Home.module.css'
 import styled, { css } from "styled-components";
 
 function MyApp({ Component, pageProps }) {
@@ -16,8 +15,8 @@ function MyApp({ Component, pageProps }) {
       </FixedHeader>
       <div>
         <Link href="/"><Button className="homeBtn">Home</Button></Link>
-        <Link href="/login"><button className="loginBtn">Login</button></Link>
-        <Link href="/register"><button className="registerBtn">Register</button></Link>
+        <Link href="/login"><Button className="loginBtn">Login</Button></Link>
+        <Link href="/register"><Button className="registerBtn">Register</Button></Link>
 
         <Component {...pageProps} />
       </div>
@@ -25,6 +24,13 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
+/*
+  This section is css styling for the header bar that appears on each page.
+  I used BuilderX to generate some styles so I could learn how those looked
+  enough to make some small changes. I would eventually want to layout each
+  screen component so I would have styles for my reusable components that match
+  up with the paper prototype. (Including icons, flexing buttons, etc)
+*/
 const Container = styled.div`
   display: flex;
   background-color: rgba(195,195,195,1);
@@ -54,7 +60,7 @@ const AppLabel = styled.span`
 `;
 
 const Button = styled.button`
-  background-color: blue;
+  background-color: #3FBDDC;
   color: white;
   font-size: 20px;
   padding: 10px 60px;
